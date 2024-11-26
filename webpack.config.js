@@ -13,6 +13,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"), //file di output dove mettere il codice buildato
+    publicPath: '/Progetto-MyNews24/',
     filename: "bundle.js",
   },
   module: {
