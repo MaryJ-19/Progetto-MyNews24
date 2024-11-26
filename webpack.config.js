@@ -51,9 +51,10 @@ module.exports = {
     new Dotenv() // rende utilizzabili nel progetto le variabili d'ambiente del file .env
   ],
   devServer: {
-    port: 5500, //in quale porta si aprirà il progetto 
+    // port: 5500, //in quale porta si aprirà il progetto 
     open: true, //apre una nuova pagina
-    static: path.resolve(__dirname, "dist"),
+    contentBase: path.resolve(__dirname, "dist"),
+    historyApiFallback: true
     // hot: false, 
   },
 //   mode: "development",

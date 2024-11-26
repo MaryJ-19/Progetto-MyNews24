@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://maryj-19.github.io/Progetto-MyNews24/",
+
   "scripts": {
     "dev": "webpack server --mode=development",
     "build": "webpack --mode=development",
