@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  a {
+    color: unset;
+    text-decoration: none;
+  }
+}
+body {
+  background-color: lightgray;
+  .navbar {
+    height: 100px;
+    background-color: #0f0851;
+
+    .navbar-brand {
+      margin-left: 30px;
+      color: white;
+      font-size: 28px;
+
+      &:hover {
+        color: #de182a;
+      }
+    }
+  }
+  main {
+    margin: 0 20px;
+    padding: 50px 20px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 1px 2px 2px gray;
+
+    h1::after {
+      content: "";
+      width: 125px;
+      display: block;
+      margin-top: 15px;
+      height: 5px;
+      background: #de182a;
+      border-radius: 50px;
+    }
+
+    .cards-wrapper {
+      margin-top: 50px;
+
+      .card-author {
+        color: #de182a;
+      }
+      .card-title {
+        min-height: 50px; /* Altezza minima per titoli più corti */
+        // max-height: 80px; /* Altezza massima per titoli lunghi */
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        display: -webkit-box; /* Necessario per abilitare il comportamento flessibile */
+        -webkit-line-clamp: 2; /* Numero massimo di righe */
+        -webkit-box-orient: vertical; /* Orientamento verticale delle righe */
+        overflow: hidden; /* Nasconde il testo che supera il limite */
+        text-overflow: ellipsis; /* Mostra i puntini di sospensione */
+        white-space: normal; 
+      }
+    }
+  }
+  footer {
+    background-color: #0f0851;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    main {
+       margin: 0 150px;
+      padding: 50px 100px;
+    }
+  }
+}
+
+@media (min-width: 420px) {
+    body {
+      main {
+    //   margin: 0 100px;
+        padding: 50px 75px;
+      }
+    }
+  }
